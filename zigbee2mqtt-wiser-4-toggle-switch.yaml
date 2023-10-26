@@ -1,0 +1,73 @@
+name: Wiser 4 toggle switch
+service: Zigbee2MQTT
+event_type: mqtt
+mqtt_topic_format: zigbee2mqtt/+/action
+buttons:
+  - x: 45
+    y: 41
+    width: 175
+    height: 143
+    actions:
+      - title: press
+        conditions:
+          - key: payload
+            value: on_top
+      - title: hold
+        conditions:
+          - key: payload
+            value: brightness_move_up_top
+      - title: hold (released)
+        conditions:
+          - key: payload
+            value: brightness_stop_top
+  - x: 230
+    y: 41
+    width: 175
+    height: 143
+    actions:
+      - title: press
+        conditions:
+          - key: payload
+            value: off_top
+      - title: hold
+        conditions:
+          - key: payload
+            value: brightness_move_down_top
+      - title: hold (released)
+        conditions:
+          - key: payload
+            value: brightness_stop_top
+  - x: 45
+    y: 264
+    width: 175
+    height: 143
+    actions:
+      - title: press
+        conditions:
+          - key: payload
+            value: on_bottom
+      - title: hold
+        conditions:
+          - key: payload
+            value: brightness_move_up_bottom
+      - title: hold (released)
+        conditions:
+          - key: payload
+            value: brightness_stop_bottom
+  - x: 230
+    y: 264
+    width: 175
+    height: 143
+    actions:
+      - title: press
+        conditions:
+          - key: payload
+            value: off_bottom
+      - title: hold
+        conditions:
+          - key: payload
+            value: brightness_move_down_bottom
+      - title: hold (released)
+        conditions:
+          - key: payload
+            value: brightness_stop_bottom
